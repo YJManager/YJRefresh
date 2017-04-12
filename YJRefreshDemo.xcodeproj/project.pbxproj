@@ -9,10 +9,24 @@
 /* Begin PBXBuildFile section */
 		632C8EAA1E9B5A5100724311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C8EA91E9B5A5100724311 /* main.m */; };
 		632C8EAD1E9B5A5100724311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C8EAC1E9B5A5100724311 /* AppDelegate.m */; };
-		632C8EB01E9B5A5100724311 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C8EAF1E9B5A5100724311 /* ViewController.m */; };
 		632C8EB31E9B5A5100724311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632C8EB11E9B5A5100724311 /* Main.storyboard */; };
 		632C8EB51E9B5A5100724311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632C8EB41E9B5A5100724311 /* Assets.xcassets */; };
 		632C8EB81E9B5A5100724311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632C8EB61E9B5A5100724311 /* LaunchScreen.storyboard */; };
+		633919C21E9C763E00DAFF00 /* YJConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919C11E9C763E00DAFF00 /* YJConfiguration.m */; };
+		633919CA1E9C7F7100DAFF00 /* YJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919C51E9C7F7100DAFF00 /* YJRefreshComponent.m */; };
+		633919CB1E9C7F7100DAFF00 /* YJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919C71E9C7F7100DAFF00 /* YJRefreshFooter.m */; };
+		633919CC1E9C7F7100DAFF00 /* YJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919C91E9C7F7100DAFF00 /* YJRefreshHeader.m */; };
+		633919CF1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919CE1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m */; };
+		633919D21E9CA1DA00DAFF00 /* NSObject+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919D11E9CA1DA00DAFF00 /* NSObject+YJRefresh.m */; };
+		63A45DF01E9B781F003D7AE8 /* UIView+YJRefeshExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A45DEF1E9B781F003D7AE8 /* UIView+YJRefeshExt.m */; };
+		63A45DF91E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A45DF81E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m */; };
+		63BAFD4B1E9E0A0000F685C1 /* NSDate+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAFD4A1E9E0A0000F685C1 /* NSDate+YJRefresh.m */; };
+		63BAFD4E1E9E11F100F685C1 /* YJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAFD4D1E9E11F100F685C1 /* YJRefreshNormalHeader.m */; };
+		63BAFD531E9E137B00F685C1 /* yj_refresh_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BAFD521E9E137B00F685C1 /* yj_refresh_arrow@2x.png */; };
+		63BAFD571E9E385E00F685C1 /* UIScrollView+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAFD561E9E385E00F685C1 /* UIScrollView+YJRefresh.m */; };
+		63CE98411E9CDC2E005208D1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98401E9CDC2E005208D1 /* MainViewController.m */; };
+		63CE98451E9CDED0005208D1 /* BasicStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98441E9CDED0005208D1 /* BasicStatusViewController.m */; };
+		63CE984A1E9CE1ED005208D1 /* YJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +34,41 @@
 		632C8EA91E9B5A5100724311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		632C8EAB1E9B5A5100724311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		632C8EAC1E9B5A5100724311 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		632C8EAE1E9B5A5100724311 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		632C8EAF1E9B5A5100724311 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		632C8EB21E9B5A5100724311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		632C8EB41E9B5A5100724311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632C8EB71E9B5A5100724311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		632C8EB91E9B5A5100724311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633919C01E9C763E00DAFF00 /* YJConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJConfiguration.h; sourceTree = "<group>"; };
+		633919C11E9C763E00DAFF00 /* YJConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJConfiguration.m; sourceTree = "<group>"; };
+		633919C41E9C7F7100DAFF00 /* YJRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshComponent.h; sourceTree = "<group>"; };
+		633919C51E9C7F7100DAFF00 /* YJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshComponent.m; sourceTree = "<group>"; };
+		633919C61E9C7F7100DAFF00 /* YJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshFooter.h; sourceTree = "<group>"; };
+		633919C71E9C7F7100DAFF00 /* YJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshFooter.m; sourceTree = "<group>"; };
+		633919C81E9C7F7100DAFF00 /* YJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshHeader.h; sourceTree = "<group>"; };
+		633919C91E9C7F7100DAFF00 /* YJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshHeader.m; sourceTree = "<group>"; };
+		633919CD1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YJRefreshPosition.h"; sourceTree = "<group>"; };
+		633919CE1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YJRefreshPosition.m"; sourceTree = "<group>"; };
+		633919D01E9CA1DA00DAFF00 /* NSObject+YJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YJRefresh.h"; sourceTree = "<group>"; };
+		633919D11E9CA1DA00DAFF00 /* NSObject+YJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YJRefresh.m"; sourceTree = "<group>"; };
+		63A45DEE1E9B781F003D7AE8 /* UIView+YJRefeshExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YJRefeshExt.h"; sourceTree = "<group>"; };
+		63A45DEF1E9B781F003D7AE8 /* UIView+YJRefeshExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YJRefeshExt.m"; sourceTree = "<group>"; };
+		63A45DF71E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YJRefeshExt.h"; sourceTree = "<group>"; };
+		63A45DF81E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YJRefeshExt.m"; sourceTree = "<group>"; };
+		63BAFD491E9E0A0000F685C1 /* NSDate+YJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YJRefresh.h"; sourceTree = "<group>"; };
+		63BAFD4A1E9E0A0000F685C1 /* NSDate+YJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YJRefresh.m"; sourceTree = "<group>"; };
+		63BAFD4C1E9E11F100F685C1 /* YJRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		63BAFD4D1E9E11F100F685C1 /* YJRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		63BAFD521E9E137B00F685C1 /* yj_refresh_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yj_refresh_arrow@2x.png"; sourceTree = "<group>"; };
+		63BAFD541E9E14D200F685C1 /* YJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefresh.h; sourceTree = "<group>"; };
+		63BAFD551E9E385E00F685C1 /* UIScrollView+YJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YJRefresh.h"; sourceTree = "<group>"; };
+		63BAFD561E9E385E00F685C1 /* UIScrollView+YJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YJRefresh.m"; sourceTree = "<group>"; };
+		63CE983F1E9CDC2E005208D1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		63CE98401E9CDC2E005208D1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		63CE98421E9CDC8B005208D1 /* YJPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPrefixHeader.pch; sourceTree = "<group>"; };
+		63CE98431E9CDED0005208D1 /* BasicStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicStatusViewController.h; sourceTree = "<group>"; };
+		63CE98441E9CDED0005208D1 /* BasicStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicStatusViewController.m; sourceTree = "<group>"; };
+		63CE98481E9CE1ED005208D1 /* YJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshStateHeader.h; sourceTree = "<group>"; };
+		63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshStateHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +85,7 @@
 		632C8E9C1E9B5A5100724311 = {
 			isa = PBXGroup;
 			children = (
+				63A45DE91E9B6373003D7AE8 /* YJRefresh */,
 				632C8EA71E9B5A5100724311 /* YJRefreshDemo */,
 				632C8EA61E9B5A5100724311 /* Products */,
 			);
@@ -60,12 +104,10 @@
 			children = (
 				632C8EAB1E9B5A5100724311 /* AppDelegate.h */,
 				632C8EAC1E9B5A5100724311 /* AppDelegate.m */,
-				632C8EAE1E9B5A5100724311 /* ViewController.h */,
-				632C8EAF1E9B5A5100724311 /* ViewController.m */,
-				632C8EB11E9B5A5100724311 /* Main.storyboard */,
-				632C8EB41E9B5A5100724311 /* Assets.xcassets */,
-				632C8EB61E9B5A5100724311 /* LaunchScreen.storyboard */,
-				632C8EB91E9B5A5100724311 /* Info.plist */,
+				63CE983F1E9CDC2E005208D1 /* MainViewController.h */,
+				63CE98401E9CDC2E005208D1 /* MainViewController.m */,
+				63CE98431E9CDED0005208D1 /* BasicStatusViewController.h */,
+				63CE98441E9CDED0005208D1 /* BasicStatusViewController.m */,
 				632C8EA81E9B5A5100724311 /* Supporting Files */,
 			);
 			path = YJRefreshDemo;
@@ -74,9 +116,87 @@
 		632C8EA81E9B5A5100724311 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				632C8EB11E9B5A5100724311 /* Main.storyboard */,
+				632C8EB41E9B5A5100724311 /* Assets.xcassets */,
+				632C8EB61E9B5A5100724311 /* LaunchScreen.storyboard */,
+				632C8EB91E9B5A5100724311 /* Info.plist */,
 				632C8EA91E9B5A5100724311 /* main.m */,
+				63CE98421E9CDC8B005208D1 /* YJPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		633919C31E9C7F7100DAFF00 /* BaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				633919C41E9C7F7100DAFF00 /* YJRefreshComponent.h */,
+				633919C51E9C7F7100DAFF00 /* YJRefreshComponent.m */,
+				633919C61E9C7F7100DAFF00 /* YJRefreshFooter.h */,
+				633919C71E9C7F7100DAFF00 /* YJRefreshFooter.m */,
+				633919C81E9C7F7100DAFF00 /* YJRefreshHeader.h */,
+				633919C91E9C7F7100DAFF00 /* YJRefreshHeader.m */,
+			);
+			path = BaseUIKit;
+			sourceTree = "<group>";
+		};
+		63A45DE91E9B6373003D7AE8 /* YJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				63BAFD4F1E9E133100F685C1 /* Resources */,
+				63CE98461E9CE1B3005208D1 /* Styles */,
+				633919C31E9C7F7100DAFF00 /* BaseUIKit */,
+				633919C01E9C763E00DAFF00 /* YJConfiguration.h */,
+				633919C11E9C763E00DAFF00 /* YJConfiguration.m */,
+				63BAFD541E9E14D200F685C1 /* YJRefresh.h */,
+				63A45DEA1E9B6AE3003D7AE8 /* Categories */,
+			);
+			path = YJRefresh;
+			sourceTree = "<group>";
+		};
+		63A45DEA1E9B6AE3003D7AE8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				63BAFD551E9E385E00F685C1 /* UIScrollView+YJRefresh.h */,
+				63BAFD561E9E385E00F685C1 /* UIScrollView+YJRefresh.m */,
+				633919CD1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.h */,
+				633919CE1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m */,
+				63A45DEE1E9B781F003D7AE8 /* UIView+YJRefeshExt.h */,
+				63A45DEF1E9B781F003D7AE8 /* UIView+YJRefeshExt.m */,
+				63A45DF71E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.h */,
+				63A45DF81E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m */,
+				633919D01E9CA1DA00DAFF00 /* NSObject+YJRefresh.h */,
+				633919D11E9CA1DA00DAFF00 /* NSObject+YJRefresh.m */,
+				63BAFD491E9E0A0000F685C1 /* NSDate+YJRefresh.h */,
+				63BAFD4A1E9E0A0000F685C1 /* NSDate+YJRefresh.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		63BAFD4F1E9E133100F685C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63BAFD521E9E137B00F685C1 /* yj_refresh_arrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63CE98461E9CE1B3005208D1 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				63CE98471E9CE1B3005208D1 /* YJCustomStyle */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		63CE98471E9CE1B3005208D1 /* YJCustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				63CE98481E9CE1ED005208D1 /* YJRefreshStateHeader.h */,
+				63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */,
+				63BAFD4C1E9E11F100F685C1 /* YJRefreshNormalHeader.h */,
+				63BAFD4D1E9E11F100F685C1 /* YJRefreshNormalHeader.m */,
+			);
+			path = YJCustomStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +261,7 @@
 				632C8EB81E9B5A5100724311 /* LaunchScreen.storyboard in Resources */,
 				632C8EB51E9B5A5100724311 /* Assets.xcassets in Resources */,
 				632C8EB31E9B5A5100724311 /* Main.storyboard in Resources */,
+				63BAFD531E9E137B00F685C1 /* yj_refresh_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +272,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632C8EB01E9B5A5100724311 /* ViewController.m in Sources */,
+				633919C21E9C763E00DAFF00 /* YJConfiguration.m in Sources */,
+				633919CB1E9C7F7100DAFF00 /* YJRefreshFooter.m in Sources */,
+				63CE98451E9CDED0005208D1 /* BasicStatusViewController.m in Sources */,
+				633919CC1E9C7F7100DAFF00 /* YJRefreshHeader.m in Sources */,
+				63CE98411E9CDC2E005208D1 /* MainViewController.m in Sources */,
+				633919D21E9CA1DA00DAFF00 /* NSObject+YJRefresh.m in Sources */,
+				63BAFD4E1E9E11F100F685C1 /* YJRefreshNormalHeader.m in Sources */,
+				63BAFD4B1E9E0A0000F685C1 /* NSDate+YJRefresh.m in Sources */,
+				633919CF1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m in Sources */,
+				63A45DF91E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m in Sources */,
+				633919CA1E9C7F7100DAFF00 /* YJRefreshComponent.m in Sources */,
 				632C8EAD1E9B5A5100724311 /* AppDelegate.m in Sources */,
+				63CE984A1E9CE1ED005208D1 /* YJRefreshStateHeader.m in Sources */,
+				63BAFD571E9E385E00F685C1 /* UIScrollView+YJRefresh.m in Sources */,
 				632C8EAA1E9B5A5100724311 /* main.m in Sources */,
+				63A45DF01E9B781F003D7AE8 /* UIView+YJRefeshExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +407,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJRefreshDemo/YJPrefixHeader.pch;
 				INFOPLIST_FILE = YJRefreshDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.houmanager.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,7 +423,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJRefreshDemo/YJPrefixHeader.pch;
 				INFOPLIST_FILE = YJRefreshDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.houmanager.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +452,7 @@
 				632C8EBE1E9B5A5100724311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,17 @@
+//
+//  YJPrefixHeader.pch
+//  YJRefreshDemo
+//
+//  Created by YJHou on 2017/4/11.
+//  Copyright © 2017年 Houmanager. All rights reserved.
+//
+
+#ifndef YJPrefixHeader_pch
+#define YJPrefixHeader_pch
+
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+
+#import "YJRefresh.h"
+
+#endif /* YJPrefixHeader_pch */
