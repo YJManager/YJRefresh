@@ -8,7 +8,6 @@
 
 #import "YJRefreshHeader.h"
 
-NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpdatedTimeKey";
 const CGFloat YJRefreshHeaderHeight = 54.0;
 
 @interface YJRefreshHeader ()
@@ -33,7 +32,6 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
 
 - (void)prepareSetting{
     [super prepareSetting];
-    self.lastUpdatedTimeKey = YJRefreshHeaderLastUpdatedTimeKey;
 }
 
 - (void)layoutPlaceSubviews{
@@ -87,10 +85,6 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
     if (state == YJRefreshStateIdle) {
         if (oldState != YJRefreshStateRefreshing) return;
         
-        // 保存刷新时间
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:self.lastUpdatedTimeKey];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
         // 恢复inset和offset
         [UIView animateWithDuration:YJRefreshSlowAnimationDuration animations:^{
             self.superScrollView.insetTop_Refesh += self.insetTDelta;
@@ -121,10 +115,6 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.state = YJRefreshStateIdle;
     });
-}
-
-- (NSDate *)lastUpdatedTime{
-    return [[NSUserDefaults standardUserDefaults] objectForKey:self.lastUpdatedTimeKey];
 }
 
 #pragma mark - Support

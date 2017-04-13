@@ -15,9 +15,6 @@
 + (instancetype)headerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock;
 + (instancetype)headerWithRefreshingTarget:(id)target action:(SEL)action;
 
-@property (nonatomic, copy) NSString *lastUpdatedTimeKey;           /**< 最后更新时间 */
-@property (strong, nonatomic, readonly) NSDate *lastUpdatedTime;    /**< 上一次下拉刷新成功的时间 */
-
 /** 初始化条件 */
 - (void)prepareSetting NS_REQUIRES_SUPER;
 

@@ -26,7 +26,6 @@
 		63BAFD571E9E385E00F685C1 /* UIScrollView+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAFD561E9E385E00F685C1 /* UIScrollView+YJRefresh.m */; };
 		63CE98411E9CDC2E005208D1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98401E9CDC2E005208D1 /* MainViewController.m */; };
 		63CE98451E9CDED0005208D1 /* BasicStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98441E9CDED0005208D1 /* BasicStatusViewController.m */; };
-		63CE984A1E9CE1ED005208D1 /* YJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,8 +66,6 @@
 		63CE98421E9CDC8B005208D1 /* YJPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPrefixHeader.pch; sourceTree = "<group>"; };
 		63CE98431E9CDED0005208D1 /* BasicStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicStatusViewController.h; sourceTree = "<group>"; };
 		63CE98441E9CDED0005208D1 /* BasicStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicStatusViewController.m; sourceTree = "<group>"; };
-		63CE98481E9CE1ED005208D1 /* YJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshStateHeader.h; sourceTree = "<group>"; };
-		63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshStateHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +188,6 @@
 		63CE98471E9CE1B3005208D1 /* YJCustomStyle */ = {
 			isa = PBXGroup;
 			children = (
-				63CE98481E9CE1ED005208D1 /* YJRefreshStateHeader.h */,
-				63CE98491E9CE1ED005208D1 /* YJRefreshStateHeader.m */,
 				63BAFD4C1E9E11F100F685C1 /* YJRefreshNormalHeader.h */,
 				63BAFD4D1E9E11F100F685C1 /* YJRefreshNormalHeader.m */,
 			);
@@ -284,7 +279,6 @@
 				63A45DF91E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m in Sources */,
 				633919CA1E9C7F7100DAFF00 /* YJRefreshComponent.m in Sources */,
 				632C8EAD1E9B5A5100724311 /* AppDelegate.m in Sources */,
-				63CE984A1E9CE1ED005208D1 /* YJRefreshStateHeader.m in Sources */,
 				63BAFD571E9E385E00F685C1 /* UIScrollView+YJRefresh.m in Sources */,
 				632C8EAA1E9B5A5100724311 /* main.m in Sources */,
 				63A45DF01E9B781F003D7AE8 /* UIView+YJRefeshExt.m in Sources */,
