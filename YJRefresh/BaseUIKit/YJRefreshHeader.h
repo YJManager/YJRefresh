@@ -4,13 +4,13 @@
 //
 //  Created by YJHou on 2017/4/10.
 //  Copyright © 2017年 Houmanager. All rights reserved.
-//  顶部下拉刷新组件
+//  顶部下拉刷新组件, 具体实现效果请自定义子类
 
 #import "YJRefreshComponent.h"
 
 @interface YJRefreshHeader : YJRefreshComponent
 
-@property (assign, nonatomic) CGFloat refreshHeaderWithSuperViewGap; /**< RefreshHeader 和 scrollView间距 */
+@property (nonatomic, assign) CGFloat refreshHeaderWithSuperViewGap; /**< RefreshHeader 和 scrollView间距 */
 
 + (instancetype)headerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock;
 + (instancetype)headerWithRefreshingTarget:(id)target action:(SEL)action;

@@ -18,6 +18,7 @@
 		633919CC1E9C7F7100DAFF00 /* YJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919C91E9C7F7100DAFF00 /* YJRefreshHeader.m */; };
 		633919CF1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919CE1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m */; };
 		633919D21E9CA1DA00DAFF00 /* NSObject+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 633919D11E9CA1DA00DAFF00 /* NSObject+YJRefresh.m */; };
+		634F07251E9F8A18002C8156 /* YJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F07241E9F8A18002C8156 /* YJRefreshStateHeader.m */; };
 		63A45DF01E9B781F003D7AE8 /* UIView+YJRefeshExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A45DEF1E9B781F003D7AE8 /* UIView+YJRefeshExt.m */; };
 		63A45DF91E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A45DF81E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.m */; };
 		63BAFD4B1E9E0A0000F685C1 /* NSDate+YJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAFD4A1E9E0A0000F685C1 /* NSDate+YJRefresh.m */; };
@@ -49,6 +50,8 @@
 		633919CE1E9C9DFB00DAFF00 /* UIScrollView+YJRefreshPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YJRefreshPosition.m"; sourceTree = "<group>"; };
 		633919D01E9CA1DA00DAFF00 /* NSObject+YJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YJRefresh.h"; sourceTree = "<group>"; };
 		633919D11E9CA1DA00DAFF00 /* NSObject+YJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YJRefresh.m"; sourceTree = "<group>"; };
+		634F07231E9F8A18002C8156 /* YJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRefreshStateHeader.h; sourceTree = "<group>"; };
+		634F07241E9F8A18002C8156 /* YJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRefreshStateHeader.m; sourceTree = "<group>"; };
 		63A45DEE1E9B781F003D7AE8 /* UIView+YJRefeshExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YJRefeshExt.h"; sourceTree = "<group>"; };
 		63A45DEF1E9B781F003D7AE8 /* UIView+YJRefeshExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YJRefeshExt.m"; sourceTree = "<group>"; };
 		63A45DF71E9B8D5F003D7AE8 /* UILabel+YJRefeshExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YJRefeshExt.h"; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 			children = (
 				63BAFD4C1E9E11F100F685C1 /* YJRefreshNormalHeader.h */,
 				63BAFD4D1E9E11F100F685C1 /* YJRefreshNormalHeader.m */,
+				634F07231E9F8A18002C8156 /* YJRefreshStateHeader.h */,
+				634F07241E9F8A18002C8156 /* YJRefreshStateHeader.m */,
 			);
 			path = YJCustomStyle;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				633919CA1E9C7F7100DAFF00 /* YJRefreshComponent.m in Sources */,
 				632C8EAD1E9B5A5100724311 /* AppDelegate.m in Sources */,
 				63BAFD571E9E385E00F685C1 /* UIScrollView+YJRefresh.m in Sources */,
+				634F07251E9F8A18002C8156 /* YJRefreshStateHeader.m in Sources */,
 				632C8EAA1E9B5A5100724311 /* main.m in Sources */,
 				63A45DF01E9B781F003D7AE8 /* UIView+YJRefeshExt.m in Sources */,
 			);
