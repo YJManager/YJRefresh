@@ -34,7 +34,7 @@ static const char YJRefreshFooterKey = '\0';            /**< 尾部 */
     if (header_Refresh != self.header_Refresh) {
         // 1.移除旧的，添加新的
         [self.header_Refresh removeFromSuperview];
-        [self insertSubview:header_Refresh atIndex:0];
+        [self insertSubview:header_Refresh atIndex:0]; // 将头部添加上去，在willMoveToSuperview里添加监听和设置x和宽度
         
         // 2. 保存新的
         NSString *key = @"header_Refresh";

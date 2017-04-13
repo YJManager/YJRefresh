@@ -34,12 +34,12 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
 - (void)prepareSetting{
     [super prepareSetting];
     self.lastUpdatedTimeKey = YJRefreshHeaderLastUpdatedTimeKey;
-    self.h_Refesh = YJRefreshHeaderHeight; // 顶部高度
 }
 
 - (void)layoutPlaceSubviews{
     [super layoutPlaceSubviews];
-    self.y_Refesh = - self.h_Refesh - self.ignoredScrollViewContentInsetTop;
+    self.y_Refesh = -self.height_Refesh - self.refreshHeaderWithSuperViewGap;
+    self.height_Refesh = YJRefreshHeaderHeight; // 顶部高度
 }
 
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change{
@@ -48,8 +48,8 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
     if (self.state == YJRefreshStateRefreshing) {
         if (self.window == nil) return;
         
-        CGFloat insetT = - self.superScrollView.offsetY_Refesh > _superScrollViewOriginalInset.top ? - self.superScrollView.offsetY_Refesh : _superScrollViewOriginalInset.top;
-        insetT = insetT > self.h_Refesh + _superScrollViewOriginalInset.top ? self.h_Refesh + _superScrollViewOriginalInset.top : insetT;
+        CGFloat insetT = -self.superScrollView.offsetY_Refesh > _superScrollViewOriginalInset.top ? -self.superScrollView.offsetY_Refesh : _superScrollViewOriginalInset.top;
+        insetT = insetT > self.height_Refesh + _superScrollViewOriginalInset.top ? self.height_Refesh + _superScrollViewOriginalInset.top : insetT;
         self.superScrollView.insetTop_Refesh = insetT;
         
         self.insetTDelta = _superScrollViewOriginalInset.top - insetT;
@@ -59,12 +59,13 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
     _superScrollViewOriginalInset = self.superScrollView.contentInset;
     
     CGFloat offsetY = self.superScrollView.offsetY_Refesh;
-    CGFloat happenOffsetY = - self.superScrollViewOriginalInset.top;
+    CGFloat happenOffsetY = -self.superScrollViewOriginalInset.top;
     
-    if (offsetY > happenOffsetY) return;
+    if (offsetY > happenOffsetY) return; // 向上滚动直接返回
     
-    CGFloat normal2pullingOffsetY = happenOffsetY - self.h_Refesh;
-    CGFloat pullingPercent = (happenOffsetY - offsetY) / self.h_Refesh;
+    /** 刷新控件完全漏出的高度 是个负数 */
+    CGFloat normal2pullingOffsetY = happenOffsetY - self.height_Refesh;
+    CGFloat pullingPercent = (happenOffsetY - offsetY) / self.height_Refesh;
     
     if (self.superScrollView.isDragging) { // 如果正在拖拽
         self.pullingPercent = pullingPercent;
@@ -93,11 +94,9 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
         // 恢复inset和offset
         [UIView animateWithDuration:YJRefreshSlowAnimationDuration animations:^{
             self.superScrollView.insetTop_Refesh += self.insetTDelta;
-            
             if (self.isAutomaticallyChangeAlpha) self.alpha = 0.0;
         } completion:^(BOOL finished) {
             self.pullingPercent = 0.0;
-            
             if (self.stopRefreshingBlock) {
                 self.stopRefreshingBlock();
             }
@@ -105,7 +104,7 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
     } else if (state == YJRefreshStateRefreshing) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:YJRefreshFastAnimationDuration animations:^{
-                CGFloat top = self.superScrollViewOriginalInset.top + self.h_Refesh;
+                CGFloat top = self.superScrollViewOriginalInset.top + self.height_Refesh;
                 // 增加滚动区域top
                 self.superScrollView.insetTop_Refesh = top;
                 // 设置滚动位置
@@ -129,5 +128,8 @@ const CGFloat YJRefreshHeaderHeight = 54.0;
 }
 
 #pragma mark - Support
+- (BOOL)isRefreshing{
+    return [super isRefreshing];
+}
 
 @end

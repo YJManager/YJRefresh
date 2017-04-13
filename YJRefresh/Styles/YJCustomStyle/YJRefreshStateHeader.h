@@ -17,6 +17,4 @@
 
 @property (assign, nonatomic) CGFloat labelLeftInset;
 
-- (void)setTitle:(NSString *)title forState:(YJRefreshState)state;
-
 @end

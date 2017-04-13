@@ -30,27 +30,25 @@
     return self.frame.origin.y;
 }
 
-
-- (void)setW_Refesh:(CGFloat)w_Refesh{
+- (void)setWidth_Refesh:(CGFloat)width_Refesh{
     CGRect frame = self.frame;
-    frame.size.width = w_Refesh;
+    frame.size.width = width_Refesh;
     self.frame = frame;
 }
 
-- (CGFloat)w_Refesh{
+- (CGFloat)width_Refesh{
     return self.frame.size.width;
 }
 
-- (void)setH_Refesh:(CGFloat)h_Refesh{
+- (void)setHeight_Refesh:(CGFloat)height_Refesh{
     CGRect frame = self.frame;
-    frame.size.height = h_Refesh;
+    frame.size.height = height_Refesh;
     self.frame = frame;
 }
 
-- (CGFloat)h_Refesh{
+- (CGFloat)height_Refesh{
     return self.frame.size.height;
 }
-
 
 - (void)setOrigin_Refesh:(CGPoint)origin_Refesh{
     CGRect frame = self.frame;

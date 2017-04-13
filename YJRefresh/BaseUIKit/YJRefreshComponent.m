@@ -54,7 +54,7 @@ NSString *const YJRefreshKeyPathPanState             = @"state";
     
     // 2.添加新的控件监听
     if (newSuperview) {
-        self.w_Refesh = newSuperview.w_Refesh;
+        self.width_Refesh = newSuperview.width_Refesh;
         self.x_Refesh = 0;
         
         _superScrollView = (UIScrollView *)newSuperview;
@@ -138,7 +138,7 @@ NSString *const YJRefreshKeyPathPanState             = @"state";
     if (self.isRefreshing) return;
     
     if (self.isAutomaticallyChangeAlpha) {
-        self.alpha = pullingPercent;
+        self.alpha = (pullingPercent >= 1)?1:pullingPercent;
     }
 }
 

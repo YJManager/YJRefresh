@@ -28,7 +28,7 @@
 
 - (void)prepareSetting{
     [super prepareSetting];
-    self.h_Refesh = YJRefreshFooterHeight;
+    self.height_Refesh = YJRefreshFooterHeight;
     self.automaticallyHidden = NO;
 }
 

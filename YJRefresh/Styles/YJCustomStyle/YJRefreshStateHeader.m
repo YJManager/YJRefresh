@@ -68,19 +68,19 @@
     if (self.lastUpdatedTimeLabel.hidden) {
         if (noConstrainsOnStatusLabel) self.stateLabel.frame = self.bounds;
     } else {
-        CGFloat stateLabelH = self.h_Refesh * 0.5;
+        CGFloat stateLabelH = self.height_Refesh * 0.5;
         if (noConstrainsOnStatusLabel) {
             self.stateLabel.x_Refesh = 0;
             self.stateLabel.y_Refesh = 0;
-            self.stateLabel.w_Refesh = self.w_Refesh;
-            self.stateLabel.h_Refesh = stateLabelH;
+            self.stateLabel.width_Refesh = self.width_Refesh;
+            self.stateLabel.height_Refesh = stateLabelH;
         }
         
         if (self.lastUpdatedTimeLabel.constraints.count == 0) {
             self.lastUpdatedTimeLabel.x_Refesh = 0;
             self.lastUpdatedTimeLabel.y_Refesh = stateLabelH;
-            self.lastUpdatedTimeLabel.w_Refesh = self.w_Refesh;
-            self.lastUpdatedTimeLabel.h_Refesh = self.h_Refesh - self.lastUpdatedTimeLabel.y_Refesh;
+            self.lastUpdatedTimeLabel.width_Refesh = self.width_Refesh;
+            self.lastUpdatedTimeLabel.height_Refesh = self.height_Refesh - self.lastUpdatedTimeLabel.y_Refesh;
         }
     }
 }

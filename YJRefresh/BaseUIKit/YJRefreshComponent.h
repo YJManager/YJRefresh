@@ -38,8 +38,8 @@
 - (void)stopRefreshing;
 - (void)stopRefreshingWithCompletionBlock:(YJRefreshingBlock)completionBlock;
 
-- (void)prepareSetting NS_REQUIRES_SUPER; /**< 准备工作 */
-- (void)layoutPlaceSubviews NS_REQUIRES_SUPER;  /** 摆放子控件frame */
+- (void)prepareSetting NS_REQUIRES_SUPER; 
+- (void)layoutPlaceSubviews NS_REQUIRES_SUPER; 
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change NS_REQUIRES_SUPER;

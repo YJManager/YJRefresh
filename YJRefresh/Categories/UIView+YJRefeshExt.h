@@ -12,8 +12,8 @@
 
 @property (nonatomic, assign) CGFloat x_Refesh;
 @property (nonatomic, assign) CGFloat y_Refesh;
-@property (nonatomic, assign) CGFloat w_Refesh;
-@property (nonatomic, assign) CGFloat h_Refesh;
+@property (nonatomic, assign) CGFloat width_Refesh;
+@property (nonatomic, assign) CGFloat height_Refesh;
 
 @property (nonatomic, assign) CGPoint origin_Refesh;
 @property (nonatomic, assign) CGSize  size_Refesh;

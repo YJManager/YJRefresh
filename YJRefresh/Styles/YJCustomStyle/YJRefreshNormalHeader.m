@@ -34,7 +34,7 @@
     [super layoutPlaceSubviews];
     
     // 箭头的中心点
-    CGFloat arrowCenterX = self.w_Refesh * 0.5;
+    CGFloat arrowCenterX = self.width_Refesh * 0.5;
     if (!self.stateLabel.hidden) {
         CGFloat stateWidth = self.stateLabel.textWith_Refresh;
         CGFloat timeWidth = 0.0;
@@ -44,7 +44,7 @@
         CGFloat textWidth = MAX(stateWidth, timeWidth);
         arrowCenterX -= textWidth / 2 + self.labelLeftInset;
     }
-    CGFloat arrowCenterY = self.h_Refesh * 0.5;
+    CGFloat arrowCenterY = self.height_Refesh * 0.5;
     CGPoint arrowCenter = CGPointMake(arrowCenterX, arrowCenterY);
     
     if (self.arrowView.constraints.count == 0) {
