@@ -10,8 +10,8 @@
 
 @interface YJRefreshHeader : YJRefreshComponent
 
-+ (instancetype)headerWithRefreshingBlock:(YJRefreshComponentRefreshingBlock)refreshingBlock;
-+ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action;
++ (instancetype)headerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock;
++ (instancetype)headerWithRefreshingTarget:(id)target action:(SEL)action;
 
 @property (nonatomic, copy) NSString *lastUpdatedTimeKey;           /**< 最后更新时间 */
 @property (strong, nonatomic, readonly) NSDate *lastUpdatedTime;    /**< 上一次下拉刷新成功的时间 */

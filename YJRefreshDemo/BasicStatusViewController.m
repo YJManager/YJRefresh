@@ -42,6 +42,7 @@
     self.tableView.yj_reloadDataBlock = ^(NSInteger total){
         NSLog(@"-->%ld", total);
     };
+    
 
 
 }
@@ -54,7 +55,7 @@
         }
         
         [self.tableView reloadData];
-        [self.tableView.header_Refresh endRefreshing];
+        [self.tableView.header_Refresh stopRefreshing];
     });
 }
 

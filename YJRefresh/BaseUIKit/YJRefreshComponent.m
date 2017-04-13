@@ -8,11 +8,16 @@
 
 #import "YJRefreshComponent.h"
 
+NSString *const YJRefreshKeyPathContentOffset        = @"contentOffset";
+NSString *const YJRefreshKeyPathContentSize          = @"contentSize";
+NSString *const YJRefreshKeyPathPanState             = @"state";
+
 @interface YJRefreshComponent ()
 
 @property (nonatomic, strong) UIPanGestureRecognizer *pan; /**< 手势 */
 @property (weak, nonatomic) id refreshingTarget;     /**< 回调对象 */
 @property (assign, nonatomic) SEL refreshingAction;  /**< 回调方法 */
+@property (copy, nonatomic) YJRefreshingBlock beginRefreshingBlock;
 
 @end
 
@@ -21,23 +26,23 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self prepare];
+        [self prepareSetting];
         self.state = YJRefreshStateIdle;
     }
     return self;
 }
 
-- (void)prepare{
+- (void)prepareSetting{
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)layoutSubviews{
-    [self placeSubviews];
+    [self layoutPlaceSubviews];
     [super layoutSubviews];
 }
 
-- (void)placeSubviews{}
+- (void)layoutPlaceSubviews{}
 
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
@@ -54,7 +59,7 @@
         
         _superScrollView = (UIScrollView *)newSuperview;
         _superScrollView.alwaysBounceVertical = YES;
-        _scrollViewOriginalInset = _superScrollView.contentInset;
+        _superScrollViewOriginalInset = _superScrollView.contentInset;
         [self _addObservers];
     }
 }
@@ -67,7 +72,7 @@
     }
 }
 
-- (void)setRefreshingTarget:(id)target refreshingAction:(SEL)action{
+- (void)setRefreshingTarget:(id)target action:(SEL)action{
     self.refreshingTarget = target;
     self.refreshingAction = action;
 }
@@ -82,7 +87,7 @@
 }
 
 #pragma mark 进入刷新状态
-- (void)beginRefreshing{
+- (void)startRefreshing{
     [UIView animateWithDuration:YJRefreshFastAnimationDuration animations:^{
         self.alpha = 1.0;
     }];
@@ -99,18 +104,18 @@
     }
 }
 
-- (void)beginRefreshingWithCompletionBlock:(void (^)())completionBlock{
-    self.beginRefreshingCompletionBlock = completionBlock;
-    [self beginRefreshing];
+- (void)startRefreshingWithCompletionBlock:(YJRefreshingBlock)completionBlock{
+    self.beginRefreshingBlock = completionBlock;
+    [self startRefreshing];
 }
 
-- (void)endRefreshing{
+- (void)stopRefreshing{
     self.state = YJRefreshStateIdle;
 }
 
-- (void)endRefreshingWithCompletionBlock:(void (^)())completionBlock{
-    self.endRefreshingCompletionBlock = completionBlock;
-    [self endRefreshing];
+- (void)stopRefreshingWithCompletionBlock:(YJRefreshingBlock)completionBlock{
+    self.stopRefreshingBlock = completionBlock;
+    [self stopRefreshing];
 }
 
 - (BOOL)isRefreshing{
@@ -178,14 +183,14 @@
 
 - (void)executeRefreshingCallback{
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.refreshingBlock) {
-            self.refreshingBlock();
+        if (self.startRefreshingBlock) {
+            self.startRefreshingBlock();
         }
         if ([self.refreshingTarget respondsToSelector:self.refreshingAction]) {
-            YJRefreshMsgSend(YJRefreshMsgTarget(self.refreshingTarget), self.refreshingAction, self);
+            ((void (*)(void *, SEL, UIView *))objc_msgSend)((__bridge void *)(self.refreshingTarget), self.refreshingAction, self);
         }
-        if (self.beginRefreshingCompletionBlock) {
-            self.beginRefreshingCompletionBlock();
+        if (self.beginRefreshingBlock) {
+            self.beginRefreshingBlock();
         }
     });
 }

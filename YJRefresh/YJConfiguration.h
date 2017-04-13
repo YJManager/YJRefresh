@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <objc/message.h>
 
-@interface YJConfiguration : NSObject
-@end
+typedef NS_ENUM(NSInteger, YJRefreshState) {
+    YJRefreshStateIdle = 1,    /**< 普通闲置状态 */
+    YJRefreshStatePulling,     /**< 松开就可以进行刷新的状态 */
+    YJRefreshStateWillRefresh, /**< 即将刷新的状态 */
+    YJRefreshStateRefreshing,  /**< 正在刷新中的状态 */
+    YJRefreshStateNoMoreData   /** 所有数据加载完毕，没有更多的数据了 */
+};
+
+/** 刷新通用 Block */
+typedef void(^YJRefreshingBlock)();
 
 // 日志输出
 #ifdef DEBUG
@@ -19,9 +27,6 @@
 #define YJRefreshLog(...)
 #endif
 
-// 运行时objc_msgSend
-#define YJRefreshMsgSend(...) ((void (*)(void *, SEL, UIView *))objc_msgSend)(__VA_ARGS__)
-#define YJRefreshMsgTarget(target) (__bridge void *)(target)
 
 // 常量
 UIKIT_EXTERN const CGFloat YJRefreshLabelLeftInset;                 /**< 左边距 */
@@ -29,13 +34,6 @@ UIKIT_EXTERN const CGFloat YJRefreshHeaderHeight;                   /**< 头部�
 UIKIT_EXTERN const CGFloat YJRefreshFooterHeight;                   /**< 底部高度 */
 UIKIT_EXTERN const CGFloat YJRefreshFastAnimationDuration;          /**< 快速动画时间 */
 UIKIT_EXTERN const CGFloat YJRefreshSlowAnimationDuration;          /**< 慢速动画时间 */
-
-UIKIT_EXTERN NSString *const YJRefreshKeyPathContentOffset;
-UIKIT_EXTERN NSString *const YJRefreshKeyPathContentSize;
-UIKIT_EXTERN NSString *const YJRefreshKeyPathContentInset;
-UIKIT_EXTERN NSString *const YJRefreshKeyPathPanState;
-
-UIKIT_EXTERN NSString *const YJRefreshHeaderLastUpdatedTimeKey;
 
 UIKIT_EXTERN NSString *const YJRefreshHeaderIdleText;
 UIKIT_EXTERN NSString *const YJRefreshHeaderPullingText;
@@ -61,3 +59,5 @@ if (state == oldState) return; \
 [super setState:state];
 
 
+@interface YJConfiguration : NSObject
+@end

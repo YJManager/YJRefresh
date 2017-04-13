@@ -8,6 +8,8 @@
 
 #import "YJRefreshHeader.h"
 
+NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpdatedTimeKey";
+
 @interface YJRefreshHeader ()
 
 @property (nonatomic, assign) CGFloat insetTDelta; /**< 顶部 */
@@ -16,26 +18,26 @@
 
 @implementation YJRefreshHeader
 
-+ (instancetype)headerWithRefreshingBlock:(YJRefreshComponentRefreshingBlock)refreshingBlock{
++ (instancetype)headerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock{
     YJRefreshHeader *header = [[self alloc] init];
-    header.refreshingBlock = refreshingBlock;
+    header.startRefreshingBlock = refreshingBlock;
     return header;
 }
 
-+ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action{
++ (instancetype)headerWithRefreshingTarget:(id)target action:(SEL)action{
     YJRefreshHeader *header = [[self alloc] init];
-    [header setRefreshingTarget:target refreshingAction:action];
+    [header setRefreshingTarget:target action:action];
     return header;
 }
 
-- (void)prepare{
-    [super prepare];
+- (void)prepareSetting{
+    [super prepareSetting];
     self.lastUpdatedTimeKey = YJRefreshHeaderLastUpdatedTimeKey;
     self.h_Refesh = YJRefreshHeaderHeight;
 }
 
-- (void)placeSubviews{
-    [super placeSubviews];
+- (void)layoutPlaceSubviews{
+    [super layoutPlaceSubviews];
     self.y_Refesh = - self.h_Refesh - self.ignoredScrollViewContentInsetTop;
 }
 
@@ -45,18 +47,18 @@
     if (self.state == YJRefreshStateRefreshing) {
         if (self.window == nil) return;
         
-        CGFloat insetT = - self.superScrollView.offsetY_Refesh > _scrollViewOriginalInset.top ? - self.superScrollView.offsetY_Refesh : _scrollViewOriginalInset.top;
-        insetT = insetT > self.h_Refesh + _scrollViewOriginalInset.top ? self.h_Refesh + _scrollViewOriginalInset.top : insetT;
+        CGFloat insetT = - self.superScrollView.offsetY_Refesh > _superScrollViewOriginalInset.top ? - self.superScrollView.offsetY_Refesh : _superScrollViewOriginalInset.top;
+        insetT = insetT > self.h_Refesh + _superScrollViewOriginalInset.top ? self.h_Refesh + _superScrollViewOriginalInset.top : insetT;
         self.superScrollView.insetTop_Refesh = insetT;
         
-        self.insetTDelta = _scrollViewOriginalInset.top - insetT;
+        self.insetTDelta = _superScrollViewOriginalInset.top - insetT;
         return;
     }
     
-    _scrollViewOriginalInset = self.superScrollView.contentInset;
+    _superScrollViewOriginalInset = self.superScrollView.contentInset;
     
     CGFloat offsetY = self.superScrollView.offsetY_Refesh;
-    CGFloat happenOffsetY = - self.scrollViewOriginalInset.top;
+    CGFloat happenOffsetY = - self.superScrollViewOriginalInset.top;
     
     if (offsetY > happenOffsetY) return;
     
@@ -71,7 +73,7 @@
             self.state = YJRefreshStateIdle;
         }
     } else if (self.state == YJRefreshStatePulling) {// 即将刷新 && 手松开
-        [self beginRefreshing];
+        [self startRefreshing];
     } else if (pullingPercent < 1) {
         self.pullingPercent = pullingPercent;
     }
@@ -95,14 +97,14 @@
         } completion:^(BOOL finished) {
             self.pullingPercent = 0.0;
             
-            if (self.endRefreshingCompletionBlock) {
-                self.endRefreshingCompletionBlock();
+            if (self.stopRefreshingBlock) {
+                self.stopRefreshingBlock();
             }
         }];
     } else if (state == YJRefreshStateRefreshing) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:YJRefreshFastAnimationDuration animations:^{
-                CGFloat top = self.scrollViewOriginalInset.top + self.h_Refesh;
+                CGFloat top = self.superScrollViewOriginalInset.top + self.h_Refesh;
                 // 增加滚动区域top
                 self.superScrollView.insetTop_Refesh = top;
                 // 设置滚动位置

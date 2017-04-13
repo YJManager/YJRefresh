@@ -14,20 +14,20 @@
 
 @implementation YJRefreshFooter
 
-+ (instancetype)footerWithRefreshingBlock:(YJRefreshComponentRefreshingBlock)refreshingBlock{
++ (instancetype)footerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock{
     YJRefreshFooter *footer = [[self alloc] init];
-    footer.refreshingBlock = refreshingBlock;
+    footer.startRefreshingBlock = refreshingBlock;
     return footer;
 }
 
 + (instancetype)footerWithRefreshingTarget:(id)target refreshingAction:(SEL)action{
     YJRefreshFooter *footer = [[self alloc] init];
-    [footer setRefreshingTarget:target refreshingAction:action];
+    [footer setRefreshingTarget:target action:action];
     return footer;
 }
 
-- (void)prepare{
-    [super prepare];
+- (void)prepareSetting{
+    [super prepareSetting];
     self.h_Refesh = YJRefreshFooterHeight;
     self.automaticallyHidden = NO;
 }

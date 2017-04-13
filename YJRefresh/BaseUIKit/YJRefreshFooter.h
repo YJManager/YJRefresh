@@ -10,7 +10,7 @@
 
 @interface YJRefreshFooter : YJRefreshComponent
 
-+ (instancetype)footerWithRefreshingBlock:(YJRefreshComponentRefreshingBlock)refreshingBlock;
++ (instancetype)footerWithRefreshingBlock:(YJRefreshingBlock)refreshingBlock;
 + (instancetype)footerWithRefreshingTarget:(id)target refreshingAction:(SEL)action;
 
 - (void)endRefreshingWithNoMoreData;

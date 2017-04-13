@@ -26,7 +26,6 @@
 }
 
 - (void)setLastUpdatedTimeKey:(NSString *)lastUpdatedTimeKey{
-//    if (!lastUpdatedTimeKey) {return;}
     [super setLastUpdatedTimeKey:lastUpdatedTimeKey];
     
     if (self.lastUpdatedTimeLabel.hidden) return;
@@ -49,8 +48,8 @@
     }
 }
 
-- (void)prepare{
-    [super prepare];
+- (void)prepareSetting{
+    [super prepareSetting];
     
     self.labelLeftInset = YJRefreshLabelLeftInset;
     
@@ -59,8 +58,8 @@
     [self setTitle:YJRefreshHeaderRefreshingText forState:YJRefreshStateRefreshing];
 }
 
-- (void)placeSubviews{
-    [super placeSubviews];
+- (void)layoutPlaceSubviews{
+    [super layoutPlaceSubviews];
     
     if (self.stateLabel.hidden) return;
     

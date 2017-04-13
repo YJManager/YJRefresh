@@ -24,14 +24,14 @@
     [self setNeedsLayout];
 }
 
-- (void)prepare{
-    [super prepare];
+- (void)prepareSetting{
+    [super prepareSetting];
     self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     self.backgroundColor = [UIColor grayColor];
 }
 
-- (void)placeSubviews{
-    [super placeSubviews];
+- (void)layoutPlaceSubviews{
+    [super layoutPlaceSubviews];
     
     // 箭头的中心点
     CGFloat arrowCenterX = self.w_Refesh * 0.5;
