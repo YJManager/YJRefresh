@@ -30,7 +30,6 @@ typedef void(^YJRefreshingBlock)();
 
 // 常量
 UIKIT_EXTERN const CGFloat YJRefreshLabelLeftInset;                 /**< 左边距 */
-UIKIT_EXTERN const CGFloat YJRefreshHeaderHeight;                   /**< 头部高度 */
 UIKIT_EXTERN const CGFloat YJRefreshFooterHeight;                   /**< 底部高度 */
 UIKIT_EXTERN const CGFloat YJRefreshFastAnimationDuration;          /**< 快速动画时间 */
 UIKIT_EXTERN const CGFloat YJRefreshSlowAnimationDuration;          /**< 慢速动画时间 */

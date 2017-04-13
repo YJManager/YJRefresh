@@ -9,7 +9,6 @@
 #import "YJConfiguration.h"
 
 const CGFloat YJRefreshLabelLeftInset = 25.0f;
-const CGFloat YJRefreshHeaderHeight = 44.0;
 const CGFloat YJRefreshFooterHeight = 44.0;
 const CGFloat YJRefreshFastAnimationDuration = 0.25;
 const CGFloat YJRefreshSlowAnimationDuration = 0.4;

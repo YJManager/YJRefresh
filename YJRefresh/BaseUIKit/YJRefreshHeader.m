@@ -9,6 +9,7 @@
 #import "YJRefreshHeader.h"
 
 NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpdatedTimeKey";
+const CGFloat YJRefreshHeaderHeight = 54.0;
 
 @interface YJRefreshHeader ()
 
@@ -33,7 +34,7 @@ NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpda
 - (void)prepareSetting{
     [super prepareSetting];
     self.lastUpdatedTimeKey = YJRefreshHeaderLastUpdatedTimeKey;
-    self.h_Refesh = YJRefreshHeaderHeight;
+    self.h_Refesh = YJRefreshHeaderHeight; // 顶部高度
 }
 
 - (void)layoutPlaceSubviews{
@@ -117,7 +118,7 @@ NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpda
 }
 
 #pragma mark - Public
-- (void)endRefreshing{
+- (void)stopRefreshing{
     dispatch_async(dispatch_get_main_queue(), ^{
         self.state = YJRefreshStateIdle;
     });
@@ -126,5 +127,7 @@ NSString *const YJRefreshHeaderLastUpdatedTimeKey    = @"YJRefreshHeaderLastUpda
 - (NSDate *)lastUpdatedTime{
     return [[NSUserDefaults standardUserDefaults] objectForKey:self.lastUpdatedTimeKey];
 }
+
+#pragma mark - Support
 
 @end
