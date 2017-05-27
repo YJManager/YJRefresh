@@ -28,7 +28,7 @@
 - (BOOL)isRefreshing;
 
 - (void)setRefreshingTarget:(id)target action:(SEL)action;
-/** 由子类触发回调 */
+/** 当scrollview偏移到合适位置, 由子类触发开始刷新回调 */
 - (void)executeRefreshingCallback;
 
 
